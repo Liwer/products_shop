@@ -1,0 +1,63 @@
+* {
+	box-sizing: border-box;
+	margin: 0 auto;
+	text-decoration: none;
+}
+	ul {
+		list-style: none;
+	}
+
+#addBurgerBtn {
+  padding: 20px;
+  border: none;
+  border-radius: 12px;
+  background-color: #19cdd6;
+  font-weight: 600;
+  color: #1e2573;
+  margin: 30px;
+}
+
+#addBurgerBtn:focus:focus {
+	outline: 0;
+}
+
+.item {
+width: 13%;
+float: left;
+  margin: 30px 30px 30px 30px;
+  border: 1px solid gray;
+  border-radius: 17px;
+  padding: 20px;
+}
+
+span {
+	padding-top: 20px;
+}
+
+#_drop {
+	border-radius: 17px;
+	width: 70px;
+	height: 70px;
+	border: 1px solid gray;
+	float: left;
+	padding: 10px;
+}
+
+#toppingItem {
+	float: right;
+}
+
+#toppingItem img {
+	width: 50px;
+}
+#tabs{
+
+}
+
+#tabs ul, #tabs li{
+	display: inline-block;
+}
+
+#tabs img{
+	max-width: 150px;
+}
