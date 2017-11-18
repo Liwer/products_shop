@@ -1,5 +1,7 @@
-var pizzaCreator = (function() {
-	var moduleId = 'hamburgerCreator';
+var hamburgerCreator = (function() {
+
+
+	var moduleId = 'pizzaCreator';
 	var burgerCollection = [];
 	var toppingsConfig = {
 		meat: {
@@ -16,6 +18,7 @@ var pizzaCreator = (function() {
 
 	function init(_container, _collection){
 		  if (_collection){
+				burgerCollection = [];
 				setConfig(_collection);
 			}
 		}
@@ -78,8 +81,9 @@ function toppings(){
 			return this.consist
 	};
 	Hamburger.prototype.import = function(toppingIds){
+				var self = this;
 				toppingIds.forEach(function(item, i, arr){
-					this.addTopping(item);
+					self.addtopping(item);
 				})
 		}
 
@@ -92,11 +96,11 @@ function toppings(){
 	function addBurger(listOftoppings) {
 		var newBurger = new Hamburger(2,2);
 
+		newBurger.addToDOM(container);
 		if(listOftoppings){
 			newBurger.import(listOftoppings);
 		}
 
-		newBurger.addToDOM(container);
 		burgerCollection.push(newBurger);
 	}
 
@@ -119,11 +123,12 @@ function toppings(){
 		"add": function() {
 			addBurger();
 		},
-		getConfig: function() {
+		"getConfig": function() {
 			return getConfig()
 		},
 		"toppings": toppings(),
-		"init": init
+		"init": init,
 	}
+
 
 })()
